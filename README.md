@@ -26,7 +26,7 @@ You should write code and documentation which addresses the following tasks:
 ## Methods
 The purpose of this script is to run an existing model on new data using a ```HuggingFace``` pipeline and then visualizing the data for easy understanding. First, the data is loaded and reformatted for processing by the model. Then, the script loops through every headline, applies the classifier to it, and extracts the emotion with the greatest likelihood. This information is then collected into a dataframe.
 
-In order to summarize the distribution of emotion across
+In order to summarize the distribution of emotion across all of the data, the proportion of each emotion is calculated, the table and plot saved. In order to summarize the distribution of emotion across *only* the fake and *only* the real news, the same calculation is made but with headlines belonging to each category separated. Here, too, the table and plot is finally saved. 
 
 ## Usage
 ### Prerequisites
@@ -44,7 +44,8 @@ In order to run the script, make sure your current directory is still the ```/cd
 
         python3 src/emotions.py
     
-
+## Discussion
+Looking at the tables and plots, there does not seem to be a significant difference between the emotions contained within the different types of news. There is somewhat more neutrality in real news, and somewhat more of emotionality in fake news, but statistical testing would be required to uncover whether this difference is significant or not.
 
 
 
